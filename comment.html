@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="my_project.css">
+    <title>Let's Cook !</title>  
+</head>
+<body>
+    <!-- ===== Navigation Bar ===== -->
+    <div class="navbar">
+        <button onclick="location.href='index.html'" href="#" class="btn">Home</button>
+        <button onclick="location.href='recipes.html'" href="#" class="btn">All Recipes</button>
+    </div>
+    <!-- ===== Static + User Comments ===== -->
+    <h2>Comments:</h2>
+    <!-- Example static comments -->
+    <div class="testimonial">
+        <p>“I’ve never cooked before, but this site made me feel like a chef! 👩‍🍳🍝”</p>
+        <span>Sara, 23</span>
+        </div>
+        <div class="testimonial">
+        <p>“This website saved me during Ramadan! So many delicious and easy recipes 🌙🧆”</p>
+        <span>Alaa, 30</span>
+        </div>
+        <div class="testimonial">
+        <p>“I didn't know how to cook, but the recipes here made everything easier !👩‍🍳❤”</p>
+        <span>Rahaf, 25</span>
+        </div>
+    </div>
+    <div id="commentsContainer"></div>
+
+    <!-- ===== Comment Form Section ===== -->
+    <form id="commentForm" method="post" >
+        <div class="content">
+            <div class="text">
+                <textarea class="comment" id="commentInput" placeholder=" Write here your comment" rows="5"></textarea>
+            </div>
+            <div class="button">
+                <button type="submit" class="-comment">Send</button>
+            </div>
+        </div>
+    </form>
+    <script src="my_project.js"></script>
+</body>
+</html>

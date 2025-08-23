@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.html">
+    <link rel="stylesheet" href="my_project.css">
+    <link rel="stylesheet" href="recipes.html">
+    <title>Let's Cook !</title>
+</head>
+<body> 
+    <!-- ===== Navigation Bar ===== -->
+    <div class="navbar">
+        <button onclick="location.href='index.html'" href="#" class="btn">Home</button>
+        <button onclick="location.href='recipes.html'" href="#" class="btn">All Recipes</button>
+    </div>
+
+    <section id="categories">
+        <h2 class="h2"> Browse by Category 🍽</h2>
+        <!-- ===== Categories Section ===== -->
+        <div class="category-buttons">
+            <button onclick="location.href='traditional.html'" class="btn"> Traditional 🥘</button>
+            <button onclick="location.href='healthy.html'" class="btn"> Healthy 🥗</button>
+            <button onclick="location.href='quick.html'" class="btn"> Quick & Easy 🍟⏱</button>
+            <button onclick="location.href='dessert.html'" class="btn"> Desserts 🍰</button>
+        </div>
+    </section>
+        <h2 class="h2"> Desserts 🍰 :</h2>
+    <section class="recipes"> 
+        <!-- recipe 1 --> 
+        <div class="recipe-card" onclick="location.href='recipe11.html'">
+            <img src="images/Donuts.jpg" alt="Donuts">
+            <h2> Donuts 🍩  </h2>
+            <p><strong>Time:</strong> 1 hr (Including fermentation, frying and decoration)</p>
+            <p><strong>Description:</strong> Fluffy, golden-brown rings of fried dough,
+                    coated in sugar or glazed with icing, making them the perfect sweet treat for any time of day.</p>
+        </div> 
+        <!-- recipe 2 -->  
+        <div class="recipe-card" onclick="location.href='recipe12.html'">
+            <img src="images/Kunafa.jpg" alt="Kunafa">
+            <h2> Kunafa </h2>
+            <p><strong>Time:</strong> 1 hr (Preparation + baking + pouring syrup)</p>
+            <p><strong>Description:</strong>A Middle Eastern dessert made with shredded phyllo dough, soaked in sweet syrup,
+                    and filled with creamy cheese or custard. Crunchy on top, soft inside.</p>
+        </div>
+        <!-- recipe 3 -->
+        <div class="recipe-card" onclick="location.href='recipe13.html'">
+            <img src="images/Brownies_.jpg" alt="Brownies">
+            <h2>Brownies </h2>
+            <p><strong>Time:</strong>1 hr (Prep + Bake + Cool)</p>
+            <p><strong>Description:</strong>Rich, fudgy chocolate squares with a slightly crisp crust and gooey center,
+                perfect for satisfying any chocolate craving.</p>
+        </div>
+        <!-- recipe 4 -->
+        <div class="recipe-card" onclick="location.href='recipe14.html'">
+            <img src="images/Crème_Caramel.jpg" alt="Crème Caramel">
+            <h2> Crème Caramel </h2>
+            <p><strong>Time:</strong> 1.5 hours (preparation + baking in a water bath + cooling)</p>
+            <p><strong>Description:</strong>A smooth, creamy custard dessert topped with a layer of golden caramel sauce,
+                offering a melt-in-your-mouth experience.</p>
+        </div>
+    </section> 
+</body>
+</html>
