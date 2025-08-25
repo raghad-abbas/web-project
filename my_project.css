@@ -54,14 +54,19 @@ h2 {
 }
 
 /* === Recipe Cards Layout === */
+/* --- Automatically distribute networks according to width --- */
 .recipes {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* --- Adapts automatically --- */
+  gap: 16px;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 24px;
 }
+
 .recipe-card {
+  width: 100%;
+  max-width: 320px; 
+  margin: 0 auto; 
   padding: 15px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -76,9 +81,10 @@ h2 {
   border-radius: 8px;
   margin-bottom: 10px;
 }
+
 .recipe-card h2 {
   color: #333;
-  margin: 10px 0 5px;
+  margin: 8px 0 4px;
 }
 .recipe-card p {
   margin: 5px 0;
@@ -107,6 +113,9 @@ img{
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
   font-size: 20px;
+}
+h3,ul,ol{
+  color: rgb(106, 66, 18); ;
 }
 /* === Generic Content Box === */
 .content {
@@ -147,18 +156,19 @@ marquee {
 /* === Category Buttons === */
 .category-buttons {
   display: flex;
-  gap: 15px;
   justify-content: center;
   margin: 50px 0;
+  flex-wrap: wrap;
+  gap: 10px 12px;
 }
 .category-buttons button {
   background: #c37e4f;
   color: #6e3213;
-  font-size: 20px;
   font-weight: bold;
-  padding: 10px 20px;
   border-radius: 10px;
   border: none;
+  font-size: clamp(16px, 2.8vw, 20px);
+  padding: 10px 16px;
 }
 
 /* === Navbar === */
@@ -166,6 +176,8 @@ marquee {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px 12px;
 }
 .navbar button {
   background: #c37e4f;
@@ -173,6 +185,8 @@ marquee {
   font-weight: bold;
   border-radius: 9px;
   border: none;
+  font-size: clamp(16px, 2.8vw, 20px);
+  padding: 10px 16px;
 }
 .btn:hover {
   background-color: #fcb382;
@@ -186,12 +200,14 @@ button {
 /* === Comment Form Styling === */
 .comment {
   margin: 1px 10px;
-  width: 310px;
+  width: 100%;
+  max-width: 700px;
   height: 40px;
 }
 .-comment {
-  width: 70px;
-  height: 25px;
+  width: auto;
+  min-width: 80px; 
+  height: 36px;
   color: #a2663e;
 }
 
@@ -215,11 +231,6 @@ button {
 
 img { max-width: 100%; height: auto; } /* -- Ensures a flexible image -- */
 
-/* Flexible font sizes   */
-h1 { font-size: clamp(28px, 5vw, 50px); }
-h2 { font-size: clamp(22px, 3.5vw, 35px); }
-.with p { font-size: clamp(20px, 4.5vw, 40px); }
-
 /* --- Flexible width containers instead of fixed ratios --- */
 .intro,
 .with,
@@ -233,36 +244,6 @@ h2 { font-size: clamp(22px, 3.5vw, 35px); }
   margin-right: auto;
   padding: 16px 18px;        /* --- Reduce bloat on small screens --- */
 }
-
-/* --- Automatically distribute networks according to width --- */
-.recipes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* --- Adapts automatically --- */
-  gap: 16px;
-  justify-content: center;
-  margin-top: 24px;
-}
-
-.recipe-card { width: 100%; max-width: 320px; margin: 0 auto; } 
-.recipe-card h2 { margin: 8px 0 4px; }
-
-/* --- Flexible buttons --- */
-.category-buttons,
-.navbar {
-  flex-wrap: wrap;
-  gap: 10px 12px;
-}
-
-.category-buttons button,
-.navbar button {
-  font-size: clamp(16px, 2.8vw, 20px);
-  padding: 10px 16px;
-}
-
-/* --- Samples and Comments --- */
-.comment { width: 100%; max-width: 420px; }
-.-comment { width: auto; min-width: 80px; height: 36px; }
-
 /* Hover only on supported devices (to avoid jumping on touch) */
 @media (hover: hover) and (pointer: fine) {
   .with:hover,
@@ -314,4 +295,3 @@ h2 { font-size: clamp(22px, 3.5vw, 35px); }
 
   .p { font-size: clamp(18px, 5vw, 22px); margin: 16px; }
 }
-
