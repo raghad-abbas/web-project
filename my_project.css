@@ -101,7 +101,7 @@ img{
   grid-template-columns: repeat(2, auto);
   background-color: #fff7ec;
   margin: 30px auto;
-  color: #4b2e17;
+  color: rgb(106, 66, 18);
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
   font-size: 20px;
@@ -109,14 +109,12 @@ img{
 .Preparation{
   background-color: #fff7ec;
   margin: 30px auto;
-  color: #4b2e17;
+  color: rgb(106, 66, 18);
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
   font-size: 20px;
 }
-h3,ul,ol{
-  color: rgb(106, 66, 18); ;
-}
+
 /* === Generic Content Box === */
 .content {
   margin: auto;
@@ -295,3 +293,4 @@ img { max-width: 100%; height: auto; } /* -- Ensures a flexible image -- */
 
   .p { font-size: clamp(18px, 5vw, 22px); margin: 16px; }
 }
+
